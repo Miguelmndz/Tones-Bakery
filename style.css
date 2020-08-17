@@ -1,0 +1,98 @@
+/* Basic styles */
+html, body {
+ margin:0;
+ padding: 0;
+ color:black;
+ font-family: sans-serif;
+ font-size: 1.1em;
+ line-height: 1.5;
+}
+p, h1{
+ margin: 0;
+}
+
+.grid-container{
+ display: grid;
+ height: 100vh;
+ grid-template-columns: 1fr 1fr 1.5fr;
+ grid-template-rows: 0.8fr 4fr 3fr 1fr;
+ grid-template-areas: 
+ "main   main   header"
+ "main   main   show"
+ "sect1  sect2  show "
+ "footer footer show"
+ ;
+ 
+}
+
+main{
+ grid-area: main;
+ background: #fffadf;
+}
+
+header{
+ grid-area: header;
+ background: white;
+}
+.navbar ul{
+ list-style: none;
+ margin-top: 5px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 1em;
+ 
+
+}
+.navbar li a {
+ text-decoration: none;
+ color: black;
+ padding: 2em;
+ 
+}
+.navbar li a:hover {
+ color:rgb(250, 137, 0)
+ 
+}
+.logo {
+ margin:10px;
+ padding-left: 15px;
+ color: burlywood;
+ text-shadow: 3px 3px 3px rgb(75, 55, 12);
+}
+.section-1{
+ grid-area: sect1;
+ background: rgb(250, 149, 82);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.section-2{
+ grid-area: sect2;
+ background: #c4b35a;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+footer{
+ grid-area: footer;
+ background: #202020;
+ color: rgb(75, 61, 61);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.showcase{
+ grid-area: show;
+ /* background: lightseagreen */
+ background: url(bakery.jpg) no-repeat;
+ background-size: cover;
+ 
+}
+
+.content-wrap {
+ margin: 50px 10px 10px 10px;
+ padding: 20px;
+ 
+}
